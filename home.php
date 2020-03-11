@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/-blue-grey.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="assets/stylesheets/example.css">
@@ -100,17 +100,22 @@
         background: #66dd1d;
         color: white;
     }
+
+    button{
+        background-color: #6FAFB9 !important;
+    }
 </style>
-<body class="w3-theme-l5">
+<body class="-l5">
 
 <!-- Navbar -->
 <div class="w3-top">
-    <div class="w3-bar w3-left-align w3-large" style="background-color: #299498">
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
+    <div class="w3-bar w3-left-align w3-large" style="background-color: #6FAFB9">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large -d2"
            href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
         <a href="#" class="w3-bar-item w3-button w3-padding-large ">
-            <img src="assets/images/logo.jfif" class="w3-circle" style="width: 43px;height: 33px;" alt="Avatar">
-        </a>
+<span style="color: white;font-size: 22px; font-family: cursive;">
+    ER
+</span>        </a>
 
         <a href="#" class="w3-bar-item w3-hide-small w3-padding-large "  title="search">
             <input type="text" value="Search" placeholder="Search ..." style="padding-left: 2px; width: 350px;"> <i
@@ -128,7 +133,7 @@
 </div>
 
 <!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large" style="margin-bottom: 20px; ">
+<div id="navDemo" class="w3-bar-block -d2 w3-hide w3-hide-large w3-hide-medium w3-large" style="margin-bottom: 20px; ">
     <a href="#" class="w3-bar-item w3-button w3-padding-large" style="margin-top: 57px;text-align: right">
         حسابي
         <img src="assets/images/default-user.png" class="w3-circle" width="25" height="25" alt="profile">
@@ -191,7 +196,7 @@
                         <div class="w3-container w3-padding">
                             <h6 class="w3-opacity" style="text-align: right" >انشر منشوراتك على شبكة التواصل</h6>
                             <p contenteditable="true" class="w3-border w3-padding" style="text-align: right">... اكتب بماذا تفكر </p>
-                            <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  نشر </button>
+                            <button type="button" class="w3-button "><i class="fa fa-pencil"></i>  نشر </button>
                         </div>
                     </div>
                 </div>
@@ -220,10 +225,10 @@
                 <hr class="w3-clear">
                 <p style="text-align: right">اريد شراء كتاب جافا </p>
 
-                <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
+                <button type="button" class="w3-button -d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
                      Like
                 </button>
-                <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>
+                <button type="button" class="w3-button -d2 w3-margin-bottom"><i class="fa fa-comment"></i>
                      Comment
                 </button>
             </div>
@@ -250,15 +255,15 @@
 
             <div class="w3-card w3-round " dir="rtl" >
                 <div class="w3-white " >
-                    <button class="w3-button w3-block w3-theme-l1 w3-right-align"><i
+                    <button class="w3-button w3-block -l1 w3-right-align"><i
                                 class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> القروبات
                     </button>
 
-                    <button class="w3-button w3-block w3-theme-l1 w3-right-align"><i
+                    <button class="w3-button w3-block -l1 w3-right-align"><i
                                 class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> الفعاليات والأنشطة
                     </button>
 
-                    <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-right-align"><i
+                    <button onclick="myFunction('Demo3')" class="w3-button w3-block -l1 w3-right-align"><i
                                 class="fa fa-users fa-fw w3-margin-right"></i> الصور
                     </button>
                     <div id="Demo3" class="w3-hide w3-container">

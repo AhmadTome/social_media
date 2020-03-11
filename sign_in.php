@@ -37,6 +37,10 @@
             border-radius: 2px;
         }
 
+        .btn{
+            background-color: #6FAFB9 !important;
+        }
+
         .login-btn {
             font-size: 15px;
             font-weight: bold;
@@ -73,7 +77,7 @@
             font-size: 18px;
         }
         .vl {
-            border-left: 6px solid green;
+            border-left: 6px solid #6FAFB9;
             height: 353px;
             left: 50%;
             display: inline-block;
