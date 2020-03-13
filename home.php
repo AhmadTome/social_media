@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>الصفحة الرئيسية</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -113,9 +113,10 @@
         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large -d2"
            href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
         <a href="#" class="w3-bar-item w3-button w3-padding-large ">
-<span style="color: white;font-size: 22px; font-family: cursive;">
-    ER
-</span>        </a>
+<span>
+                <img src="assets/images/brand.jpg" style="width: 60px; height: 37px;"  >
+</span>
+        </a>
 
         <a href="#" class="w3-bar-item w3-hide-small w3-padding-large "  title="search">
             <input type="text" value="Search" placeholder="Search ..." style="padding-left: 2px; width: 350px;"> <i
@@ -144,12 +145,13 @@
 
 </div>
 
-<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px;">
     <div class="simple-marquee-container">
 
         <div class="marquee">
             <ul class="marquee-content-items">
                 <li>My edu reference اهلا وسهلا بكم في موقع وشبكة تواصل  </li>
+
 
             </ul>
         </div>
@@ -178,6 +180,9 @@
                             </li>
                             <li>
                                 افنان
+                            </li>
+                            <li>
+                                سندس
                             </li>
                         </ul>
                     </div>
