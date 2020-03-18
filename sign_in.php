@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>صفحة تسجيل الدخول</title>
+    <title>Login page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -35,6 +35,7 @@
         .form-control, .btn {
             min-height: 38px;
             border-radius: 2px;
+            font-size: 12px;
         }
 
         .btn{
@@ -94,12 +95,12 @@
             </div>
             </span>
             <span class="vl"></span>
-            <span dir="rtl" class="pull-right" style="display: inline-block; width: 45%; height: 100%;margin-top: 100px ">
+            <span dir="ltr" class="pull-right" style="display: inline-block; width: 45%; height: 100%;margin-top: 100px ">
 
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input type="text" class="form-control" name="username" placeholder="اسم المستخدم" required="required">
+                        <input type="email" class="form-control" name="username" placeholder="example@company.com" required="required">
                     </div>
                 </div>
                 <div class="form-group">
@@ -109,7 +110,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-block login-btn" style="color: white">تسجيل الدخول</button>
+                    <button type="submit" class="btn btn-block login-btn" style="color: white">Login</button>
                 </div>
             </span>
          </div>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>الصفحة الرئيسية</title>
+<title>Home Page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -32,7 +32,7 @@
         cursor: pointer;
         top: 0;
         left: 0;
-        right: 0;
+        left: 0;
         bottom: 0;
         background-color: #ccc;
         -webkit-transition: .4s;
@@ -110,7 +110,7 @@
 <!-- Navbar -->
 <div class="w3-top">
     <div class="w3-bar w3-left-align w3-large" style="background-color: #6FAFB9">
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large -d2"
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-left w3-padding-large w3-hover-white w3-large -d2"
            href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
         <a href="#" class="w3-bar-item w3-button w3-padding-large ">
 <span>
@@ -135,13 +135,13 @@
 
 <!-- Navbar on small screens -->
 <div id="navDemo" class="w3-bar-block -d2 w3-hide w3-hide-large w3-hide-medium w3-large" style="margin-bottom: 20px; ">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large" style="margin-top: 57px;text-align: right">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" style="margin-top: 57px;text-align: left">
         حسابي
         <img src="assets/images/default-user.png" class="w3-circle" width="25" height="25" alt="profile">
     </a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large" style="text-align: right">الأصدقاء</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large" style="text-align: right">رسائلي الخاصة</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large" style="text-align: right">القروبات</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" style="text-align: left">Friends</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" style="text-align: left">messages</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" style="text-align: left">Groups</a>
 
 </div>
 
@@ -150,7 +150,7 @@
 
         <div class="marquee">
             <ul class="marquee-content-items">
-                <li>My edu reference اهلا وسهلا بكم في موقع وشبكة تواصل  </li>
+                <li>You are welcome to our site My edu reference   </li>
 
 
             </ul>
@@ -168,21 +168,21 @@
             <!-- Alert Box -->
             <div class="w3-container w3-display-container w3-round w3-margin-bottom w3-hide-small">
                 <div class="w3-card w3-round w3-white">
-                    <div class="w3-container" dir="rtl">
-                        <h4 class="w3-right">الأصدقاء</h4><br>
+                    <div class="w3-container" dir="ltr">
+                        <h4 class="w3-left">Friends</h4><br>
                         <hr>
                         <ul>
                             <li>
-                                احمد
+                                Ahmad
                             </li>
                             <li>
-                                سندس
+                                Sondus
                             </li>
                             <li>
-                                افنان
+                                Afnan
                             </li>
                             <li>
-                                سندس
+                                Ahlam
                             </li>
                         </ul>
                     </div>
@@ -199,9 +199,9 @@
                 <div class="w3-col m12">
                     <div class="w3-card w3-round w3-white">
                         <div class="w3-container w3-padding">
-                            <h6 class="w3-opacity" style="text-align: right" >انشر منشوراتك على شبكة التواصل</h6>
-                            <p contenteditable="true" class="w3-border w3-padding" style="text-align: right">... اكتب بماذا تفكر </p>
-                            <button type="button" class="w3-button "><i class="fa fa-pencil"></i>  نشر </button>
+                            <h6 class="w3-opacity" style="text-align: left" >Share posts on the social media network</h6>
+                            <p contenteditable="true" class="w3-border w3-padding" style="text-align: left">Your Status ... </p>
+                            <button type="button" class="w3-button pull-right"><i class="fa fa-pencil"></i>  Post </button>
                         </div>
                     </div>
                 </div>
@@ -211,10 +211,10 @@
                 <div class="w3-col m12">
                     <div class="w3-card w3-round w3-white">
                         <div class="w3-container w3-padding">
-                            <label class="pull-right" style="font-size: 18px; margin: 3px;"> منشورات عامة</label>
-                            <label class="switch pull-right">
+                            <label class="pull-left" style="font-size: 18px; margin: 3px;"> Public Post</label>
+                            <label class="switch pull-left">
                                 <input type="checkbox" checked>
-                                <span class="slider round"></span>
+                                <span class="slider round" style="min-width: 60px;"></span>
                             </label>
 
                         </div>
@@ -223,53 +223,47 @@
             </div>
 
             <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-                <img src="assets/images/default-user.png" alt="Avatar" class="w3-right w3-circle w3-margin-left"
-                     style="width:42px">
-                <span class="w3-left w3-opacity">1 min</span>
-                <h4 class="pull-right">محمد سليمات</h4><br>
+                <img src="assets/images/default-user.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                <span class="w3-right w3-opacity">16 min</span>
+                <h4>Mohammad Imad</h4><br>
                 <hr class="w3-clear">
-                <p style="text-align: right">اريد شراء كتاب جافا </p>
-
-                <button type="button" class="w3-button -d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
-                     Like
-                </button>
-                <button type="button" class="w3-button -d2 w3-margin-bottom"><i class="fa fa-comment"></i>
-                     Comment
-                </button>
+                <p>I need Java book, if anyone can help me please inbox me</p>
+                <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i> &nbsp;Like</button>
+                <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> &nbsp;Comment</button>
             </div>
 
 
         </div>
 
-        <!-- Right Column -->
+        <!-- left Column -->
         <div class="w3-col m2">
             <div class="w3-card w3-round w3-white w3-center">
                 <div class="w3-container">
-                    <h4 class="w3-center">الصفحة الشخصية</h4>
+                    <h4 class="w3-center">Personal Page</h4>
                     <p class="w3-center"><img src="assets/images/default-user.png" class="w3-circle"
                                               style="height:106px;width:106px" alt="Avatar"></p>
                     <hr>
-                    <div dir="rtl" class="pull-right">
-                        <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
-                        <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>
-                        <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 1988</p>
+                    <div dir="ltr" class="pull-left">
+                        <p><i class="fa fa-pencil fa-fw w3-margin-left w3-text-theme"></i> Designer, UI</p>
+                        <p><i class="fa fa-home fa-fw w3-margin-left w3-text-theme"></i> London, UK</p>
+                        <p><i class="fa fa-birthday-cake fa-fw w3-margin-left w3-text-theme"></i> April 1, 1988</p>
                     </div>
                 </div>
             </div>
             <br>
 
-            <div class="w3-card w3-round " dir="rtl" >
+            <div class="w3-card w3-round " dir="ltr" >
                 <div class="w3-white " >
-                    <button class="w3-button w3-block -l1 w3-right-align"><i
-                                class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> القروبات
+                    <button class="w3-button w3-block -l1 w3-left-align"><i
+                                class="fa fa-circle-o-notch fa-fw w3-margin-left"></i> Groups
                     </button>
 
-                    <button class="w3-button w3-block -l1 w3-right-align"><i
-                                class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> الفعاليات والأنشطة
+                    <button class="w3-button w3-block -l1 w3-left-align"><i
+                                class="fa fa-calendar-check-o fa-fw w3-margin-left"></i>Event and Activity
                     </button>
 
-                    <button onclick="myFunction('Demo3')" class="w3-button w3-block -l1 w3-right-align"><i
-                                class="fa fa-users fa-fw w3-margin-right"></i> الصور
+                    <button onclick="myFunction('Demo3')" class="w3-button w3-block -l1 w3-left-align"><i
+                                class="fa fa-users fa-fw w3-margin-left"></i> Photos
                     </button>
                     <div id="Demo3" class="w3-hide w3-container">
                         <div class="w3-row-padding">
@@ -300,7 +294,7 @@
 
 
 
-            <!-- End Right Column -->
+            <!-- End left Column -->
         </div>
 
         <!-- End Grid -->
@@ -318,7 +312,7 @@
         <a href="#" class="fa fa-twitter faf"></a>
         <a href="#" class="fa fa-whatsapp faf"></a>
     </h3>
-    <h5 style="text-align: center"> تكرماً ساهم في نشر الموقع ليستفيد الجميع منه
+    <h5 style="text-align: center">Please share the website on social media
     </h5>
 
 </footer>
