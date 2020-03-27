@@ -8,7 +8,7 @@ session_start();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login page</title>
+    <title>SingUp page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -91,7 +91,7 @@ session_start();
 </head>
 <body>
 <div class="login-form" style="margin-top: 110px;">
-    <form action="database/login.php" method="post" style="border-radius: 21%;height: 415px;">
+    <form action="database/register.php" method="post" style="border-radius: 21%;height: 415px;">
         <div class="parent_class" style="width: 100%; height: 320px;">
             <span style="display: inline-block; width: 45%; background-color: grey">
             <div style="margin-top: -154px;margin-left: 91px;">
@@ -99,8 +99,20 @@ session_start();
             </div>
             </span>
             <span class="vl"></span>
-            <span dir="ltr" class="pull-right" style="display: inline-block; width: 45%; height: 100%;margin-top: 100px ">
+            <span dir="ltr" class="pull-right" style="display: inline-block; width: 45%; height: 100%;margin-top: 60px ">
 
+                 <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control" name="name" placeholder="full name" required="required">
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-birthday-cake"></i></span>
+                        <input type="text" class="form-control" name="age" placeholder="19 for example" required="required">
+                    </div>
+                </div>
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
@@ -113,9 +125,8 @@ session_start();
                         <input type="password" class="form-control" name="pwd" placeholder="********" required="required">
                     </div>
                 </div>
-
                 <div class="form-group">
-                    <button type="submit" class="btn btn-block login-btn" style="color: white">Login</button>
+                    <button type="submit" class="btn btn-block login-btn" style="color: white">SingUp</button>
                 </div>
                  <p class="text-left" style="color: red">
                             <?php
@@ -127,12 +138,11 @@ session_start();
 
                             }
                             ?>
-                            </p>
-
-							<p class="text-right"> Don't have an account? <a href="sign_up.php">SignUp</a></p>
+                  </p>
+                  <p class="text-center">Did you have an account ? <a href="sign_in.php">SignIn</a>
 
             </span>
-         </div>
+        </div>
 
 
 
