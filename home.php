@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_email'])) {
+    header('Location:sign_in.php');
+}
+?>
 <!DOCTYPE html>
 <html>
 <title>Home Page</title>
@@ -107,31 +114,11 @@
 </style>
 <body class="-l5">
 
-<!-- Navbar -->
-<div class="w3-top">
-    <div class="w3-bar w3-left-align w3-large" style="background-color: #6FAFB9">
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-left w3-padding-large w3-hover-white w3-large -d2"
-           href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large ">
-<span>
-                <img src="assets/images/brand.jpg" style="width: 60px; height: 37px;"  >
-</span>
-        </a>
+<?php
 
-        <a href="#" class="w3-bar-item w3-hide-small w3-padding-large "  title="search">
-            <input type="text" value="Search" placeholder="Search ..." style="padding-left: 2px; width: 350px;"> <i
-                    class="fa fa-search"></i>
-        </a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-           title="Account Settings"><i class="fa fa-user"></i></a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i
-                    class="fa fa-envelope"></i></a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
-           title="My Account">
-            <img src="assets/images/default-user.png" class="w3-circle" style="height:23px;width:23px" alt="profile">
-        </a>
-    </div>
-</div>
+include ('navbar.html');
+
+?>
 
 <!-- Navbar on small screens -->
 <div id="navDemo" class="w3-bar-block -d2 w3-hide w3-hide-large w3-hide-medium w3-large" style="margin-bottom: 20px; ">
@@ -195,18 +182,44 @@
         <!-- Middle Column -->
         <div class="w3-col m7">
 
-            <div class="w3-row-padding">
-                <div class="w3-col m12">
-                    <div class="w3-card w3-round w3-white">
-                        <div class="w3-container w3-padding">
-                            <h6 class="w3-opacity" style="text-align: left" >Share posts on the social media network</h6>
-                            <p contenteditable="true" class="w3-border w3-padding" style="text-align: left">Your Status ... </p>
-                            <button type="button" class="w3-button pull-right"><i class="fa fa-pencil"></i>  Post </button>
+            <form name="postForm" action="database/addpost.php" method="post" accept-charset="utf-8">
+                <div class="w3-row-padding">
+                    <div class="w3-col m12">
+                        <div class="w3-card w3-round w3-white">
+                            <div class="w3-container w3-padding">
+                                <h6 class="w3-opacity" style="text-align: left" >Share posts on the social media network</h6>
+                                <textarea contenteditable="true" rows="5" class="form-control w3-border w3-padding" id="post_txt" name="post_txt" style="width: 100%;text-align: left" data-placeholder="Your Status ..."> </textarea>
+                                <div class="row">
+                                    <label for="sel1">Post Type:</label>
+                                    <select class="form-control" id="post_type" name="post_type">
+                                        <option value="News">News</option>
+                                        <option value="Questions">Questions</option>
+                                        <option value="Volunteer">Volunteer</option>
+                                        <option value="Activity">Activity</option>
+                                        <option value="Event">Event</option>
+                                        <option value="Training">Training</option>
+                                        <option value="Announcement">Announcement</option>
+                                    </select>
+                                </div>
+                                <p class="text-right pull-right" style="color: green;font-size: 20px;">
+                                    <?php
+                                    if (isset($_SESSION['post_added'])) {
+                                        echo $_SESSION['post_added'];
+
+                                        unset($_SESSION['post_added']);
+
+                                    }
+                                    ?>
+                                </p>
+                                <button type="submit" id="btn" class="w3-button w3-theme" style="margin-top: 10px;"><i
+                                            class="fa fa-pencil"></i>
+                                     Post
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </form>
             <div class="w3-row-padding" style="margin: 5px;">
                 <div class="w3-col m12">
                     <div class="w3-card w3-round w3-white">
@@ -240,13 +253,13 @@
             <div class="w3-card w3-round w3-white w3-center">
                 <div class="w3-container">
                     <h4 class="w3-center">Personal Page</h4>
-                    <p class="w3-center"><img src="assets/images/default-user.png" class="w3-circle"
+                    <p class="w3-center"><img src="<?php echo getdata("img") ?>" class="w3-circle"
                                               style="height:106px;width:106px" alt="Avatar"></p>
                     <hr>
-                    <div dir="ltr" class="pull-left">
-                        <p><i class="fa fa-pencil fa-fw w3-margin-left w3-text-theme"></i> Designer, UI</p>
-                        <p><i class="fa fa-home fa-fw w3-margin-left w3-text-theme"></i> London, UK</p>
-                        <p><i class="fa fa-birthday-cake fa-fw w3-margin-left w3-text-theme"></i> April 1, 1988</p>
+                    <div dir="ltr" class="pull-left" style="text-align: left">
+                        <p><i class="fa fa-pencil fa-fw w3-margin-left w3-text-theme"></i> <?php echo getdata("major") ?></p>
+                        <p><i class="fa fa-home fa-fw w3-margin-left w3-text-theme"></i> <?php echo getdata("university") ?></p>
+                        <p><i class="fa fa-birthday-cake fa-fw w3-margin-left w3-text-theme"></i> <?php echo getdata("age") ?></p>
                     </div>
                 </div>
             </div>
@@ -354,3 +367,49 @@
 
 </body>
 </html>
+
+<?php
+function getdata($input)
+{
+    $servername = "localhost";
+    $username = "social_media";
+    $password = "";
+
+// Create connection
+//$conn = mysqli_connect($servername, $username, $password);
+    $conn = mysqli_connect($servername, "root", $password, $username, "3306");
+// Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    mysqli_set_charset($conn, "utf8");
+    $query = "select * from  `user` where email = '" . $_SESSION['user_email'] . "'";
+    $result = $conn->query($query);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $user_id = $row["id"];
+        $user_img = $row["img"];
+        $user_age = $row["age"];
+        $user_name = $row["name"];
+        $major = $row["major"];
+        $university = $row["university"];
+        if ($input == "age")
+            return $user_age;
+        if ($input == "img")
+            return $user_img;
+        if ($input == "name")
+            return $user_name;
+        if ($input == "id")
+            return $user_id;
+        if ($input == "major")
+            return $major;
+        if ($input == "university")
+            return $university;
+    } else {
+        header('Location: ../sign_in.php');
+    }
+    return "";
+}
+
+?>
