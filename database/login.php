@@ -25,8 +25,9 @@ $result = $conn->query($query);
 
 
 if ($result->num_rows > 0) {
-
+    $row = $result->fetch_assoc();
     $_SESSION['user_email'] = $username;
+    $_SESSION['user_type'] = $row['type'];
     header('Location: ../home.php');
 }
  else {

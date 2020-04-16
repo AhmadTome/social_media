@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/home.php" line="332" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ebfa4dd6-7d3a-4ece-a7e6-9a54019eb877" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/addpost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/edit_person_info.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personalinfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EventAndActivity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/FriendAcceptRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/FriendSendRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/addComment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/addPhoto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/addgroup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/joinGroup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/result.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendList.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/groups.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/default.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/stylesheets/messages.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/stylesheets/messages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/addpost.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/addpost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalinfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/personalinfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sign_up.php" beforeDir="false" afterPath="$PROJECT_DIR$/sign_up.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,24 +34,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/home.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sign_up.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="212" column="36" selection-start-line="212" selection-start-column="36" selection-end-line="212" selection-end-column="36" />
-              <folding>
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="493">
+              <caret line="129" column="76" selection-start-line="129" selection-start-column="76" selection-end-line="129" selection-end-column="76" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/addpost.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
+            <state relative-caret-position="493">
+              <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -63,6 +76,17 @@
       <find>rtl</find>
       <find>right</find>
       <find>suc</find>
+      <find>.msg_send_btn</find>
+      <find>تعليق</find>
+      <find>send</find>
+      <find>event and</find>
+      <find>Group</find>
+      <find>table</find>
+      <find>demo3</find>
+      <find>ahmad</find>
+      <find>getFriends</find>
+      <find>\n</find>
+      <find>post</find>
     </findStrings>
     <replaceStrings>
       <replace>left</replace>
@@ -74,22 +98,37 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/register.php" />
-        <option value="$PROJECT_DIR$/database/login.php" />
-        <option value="$PROJECT_DIR$/sign_up.php" />
         <option value="$PROJECT_DIR$/sign_in.php" />
         <option value="$PROJECT_DIR$/database/edit_person_info.php" />
+        <option value="$PROJECT_DIR$/database/addComment.php" />
+        <option value="$PROJECT_DIR$/database/getMSGS.php" />
+        <option value="$PROJECT_DIR$/database/AddNewMsg.php" />
+        <option value="$PROJECT_DIR$/assets/stylesheets/messages.css" />
+        <option value="$PROJECT_DIR$/database/sendMSG.php" />
+        <option value="$PROJECT_DIR$/messages.php" />
+        <option value="$PROJECT_DIR$/database/addgroup.php" />
+        <option value="$PROJECT_DIR$/database/joinGroup.php" />
+        <option value="$PROJECT_DIR$/database/addPhoto.php" />
+        <option value="$PROJECT_DIR$/EventAndActivity.php" />
+        <option value="$PROJECT_DIR$/groups.php" />
+        <option value="$PROJECT_DIR$/database/FriendSendRequest.php" />
+        <option value="$PROJECT_DIR$/friendList.php" />
+        <option value="$PROJECT_DIR$/database/FriendAcceptRequest.php" />
         <option value="$PROJECT_DIR$/personalinfo.php" />
-        <option value="$PROJECT_DIR$/navbar.html" />
         <option value="$PROJECT_DIR$/database/addpost.php" />
         <option value="$PROJECT_DIR$/home.php" />
+        <option value="$PROJECT_DIR$/navbar.html" />
+        <option value="$PROJECT_DIR$/database/result.php" />
+        <option value="$PROJECT_DIR$/database/register.php" />
+        <option value="$PROJECT_DIR$/sign_up.php" />
+        <option value="$PROJECT_DIR$/database/login.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="-225" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-1932" />
+    <option name="y" value="-154" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -121,7 +160,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../online_assessment" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UNIVERSITY_SERVICES" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -130,6 +169,7 @@
       <recent name="C:\xampp\htdocs\social_media\database" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\social_media\img" />
       <recent name="C:\xampp\htdocs\social_media\database" />
       <recent name="C:\xampp\htdocs\social_media" />
       <recent name="C:\xampp\htdocs\social_media\assets\stylesheets" />
@@ -171,18 +211,26 @@
       <workItem from="1585300837498" duration="2221000" />
       <workItem from="1585768113154" duration="3667000" />
       <workItem from="1585829304487" duration="8000" />
-      <workItem from="1586001721130" duration="3080000" />
+      <workItem from="1586001721130" duration="3680000" />
+      <workItem from="1586282066040" duration="698000" />
+      <workItem from="1586369357632" duration="1699000" />
+      <workItem from="1586380748377" duration="4212000" />
+      <workItem from="1586685782662" duration="948000" />
+      <workItem from="1586697913790" duration="475000" />
+      <workItem from="1586698397826" duration="14780000" />
+      <workItem from="1586985831636" duration="743000" />
+      <workItem from="1587037643233" duration="16696000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34537000" />
+    <option name="totallyTimeSpent" value="75388000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-225" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29530916" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16684435" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -224,76 +272,200 @@
     <entry file="file://$PROJECT_DIR$/assets/images/logo.jfif">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/register.php">
+    <entry file="file://$PROJECT_DIR$/database/addComment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="25" />
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sign_up.php">
+    <entry file="file://$PROJECT_DIR$/assets/stylesheets/messages.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="101" column="116" selection-start-line="101" selection-start-column="116" selection-end-line="101" selection-end-column="116" />
+        <state relative-caret-position="609">
+          <caret line="126" column="9" selection-start-line="126" selection-start-column="9" selection-end-line="126" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/56960772_173898660264675_1453046736309316050_n.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/uploaded/pesonal_profile.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/sendMSG.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/addgroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="11" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/AddNewMsg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="115" selection-start-line="39" selection-start-column="79" selection-end-line="39" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EventAndActivity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="813">
+          <caret line="651" column="1" selection-start-line="651" selection-start-column="1" selection-end-line="651" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/groups.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="345" column="4" selection-start-line="345" selection-start-column="4" selection-end-line="364" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/joinGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="1" lean-forward="true" selection-end-line="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sign_in.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/login.php">
+    <entry file="file://$PROJECT_DIR$/friendList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="25" />
+        <state relative-caret-position="192">
+          <caret line="134" column="2" lean-forward="true" selection-start-line="134" selection-start-column="2" selection-end-line="157" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/uploaded/pesonal_profile.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/56960772_173898660264675_1453046736309316050_n.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/personalinfo.php">
+    <entry file="file://$PROJECT_DIR$/database/FriendSendRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3026">
-          <caret line="178" column="33" selection-start-line="178" selection-start-column="23" selection-end-line="178" selection-end-column="33" />
+        <state relative-caret-position="272">
+          <caret line="16" column="1" lean-forward="true" selection-end-line="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/navbar.html">
+    <entry file="file://$PROJECT_DIR$/database/FriendAcceptRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/edit_person_info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="25" />
+        <state relative-caret-position="238">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/addpost.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
+        <state relative-caret-position="-369">
+          <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/addPhoto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="72" column="85" selection-start-line="72" selection-start-column="81" selection-end-line="72" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/edit_person_info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalinfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="186" selection-start-line="186" selection-end-line="188" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/messages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1977">
+          <caret line="197" column="19" lean-forward="true" selection-start-line="197" selection-start-column="19" selection-end-line="197" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#a#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#5;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="212" column="36" selection-start-line="212" selection-start-column="36" selection-end-line="212" selection-end-column="36" />
+        <state relative-caret-position="367">
+          <caret line="243" column="84" lean-forward="true" selection-start-line="241" selection-start-column="35" selection-end-line="243" selection-end-column="84" />
           <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/result.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="63" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/getMSGS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="42" column="41" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign_up.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="129" column="76" selection-start-line="129" selection-start-column="76" selection-end-line="129" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
         </state>
       </provider>
     </entry>

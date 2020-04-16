@@ -17,14 +17,16 @@ $name = $_POST['name'];
 $age = $_POST['age'];
 $email = $_POST['username'];
 $pwd = $_POST['pwd'];
+$user_type = $_POST['user_type'];
 
 
 
-$query = "INSERT INTO user(`name`, `email`, `password`, `age`) VALUES('$name', '$email', '$pwd', '$age')";
+$query = "INSERT INTO user(`name`, `email`, `password`, `age`, `type`) VALUES('$name', '$email', '$pwd', '$age', '$user_type')";
 $result = mysqli_query($conn,$query);
 if($result) {
     session_start();
     $_SESSION['user_email'] = $email;
+     $_SESSION['user_type'] = $user_type;
     echo "Succesfully registered";
     header('Location: ../home.php');
 }

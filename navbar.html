@@ -10,16 +10,54 @@
         </a>
 
         <a href="#" class="w3-bar-item w3-hide-small w3-padding-large "  title="search">
-            <input type="text" value="Search" placeholder="Search ..." style="padding-left: 2px; width: 350px;"> <i
+            <input  type="text" value="" id="search" placeholder="Search ..." style="padding-left: 2px; width: 350px;"> <i id="search-btn"
                 class="fa fa-search"></i>
         </a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+        <a href="personalinfo.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
            title="Account Settings"><i class="fa fa-user"></i></a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i
+        <a href="messages.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i
                 class="fa fa-envelope"></i></a>
-        <a href="personalinfo.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
-           title="My Account">
-            <img src="assets/images/default-user.png" class="w3-circle" style="height:23px;width:23px" alt="profile">
+        <a href="helper/kill_session.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" style="color: white"
+           title="Logout">
+            Logout
         </a>
     </div>
 </div>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#search-btn").on("click",function () {
+            var val = document.getElementById('search').value;
+
+            $.ajax({
+                url: "database/result.php",
+                type: "get",
+                data: {"val": val},
+                success: function (response) {
+                response = JSON.parse(response)
+                    $('.post').remove();
+                        if(response[0]["txt"] != null){
+                            $('#top-post').html('<div class="w3-container w3-card w3-white w3-round w3-margin post" "><br> ' +
+                                '                                            <img src=' + response[0]["img"] + ' alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px"> ' +
+                                '                                            <span class="w3-right w3-opacity">' + response[0]["created_at"] +'</span> ' +
+                                '                                            <h4>' + response[0]["name"] +'</h4><br> ' +
+                                '                                            <span style="margin-right: 15px;color: #6FAFB9;font-weight: bold;" class="w3-right w3-opacity"> '+ response[0]["type"] +'*</span> ' +
+                                '                                            <hr class="w3-clear"> ' +
+                                '                                            <p>' + response[0]["txt"] +'</p></div><br/>');
+                    }
+
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+
+
+            });
+        })
+
+    })
+</script>

@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_email'])) {
 ?>
 <!DOCTYPE html>
 <html>
-<title>Home Page</title>
+<title>Event & Activity Page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -22,7 +22,6 @@ if (!isset($_SESSION['user_email'])) {
     html, body, h1, h2, h3, h4, h5 {
         font-family: "Open Sans", sans-serif
     }
-
     .switch {
         position: relative;
         display: inline-block;
@@ -82,7 +81,6 @@ if (!isset($_SESSION['user_email'])) {
     .slider.round:before {
         border-radius: 50%;
     }
-
     .faf {
         padding: 9px;
         font-size: 30px;
@@ -111,7 +109,7 @@ if (!isset($_SESSION['user_email'])) {
         color: white;
     }
 
-    button {
+    button{
         background-color: #6FAFB9 !important;
     }
 </style>
@@ -119,7 +117,7 @@ if (!isset($_SESSION['user_email'])) {
 
 <?php
 
-include('navbar.html');
+include ('navbar.html');
 
 ?>
 
@@ -135,25 +133,7 @@ include('navbar.html');
 
 </div>
 
-<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px;">
-    <div class="simple-marquee-container">
 
-        <div class="marquee">
-            <ul class="marquee-content-items">
-                <?php
-                $post = getposts();
-                foreach ($post as $item) {
-                    if ($item["type"] == "Announcement")
-                        echo '<li>' . $item["txt"] . '</li>';
-
-                }
-
-                ?>
-
-            </ul>
-        </div>
-    </div>
-</div>
 <!-- Page Container -->
 <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
     <!-- The Grid -->
@@ -168,26 +148,19 @@ include('navbar.html');
                     <div class="w3-container" dir="ltr">
                         <h4 class="w3-left">Friends</h4><br>
                         <hr>
-                        <a href="friendList.php">find new friends</a>
-
-
-
-
-
                         <ul>
-
-                            <?php
-
-                            $users = getFriends();
-                            for($i=0;$i<count($users);$i++){
-                                if($users[$i]["id"] != $users[$i]["my_user_id"]){
-                                    echo ' <li>
-                                               '. $users[$i]["name"] .'
-                                         </li>';
-                                }
-                            }
-                            ?>
-
+                            <li>
+                                Ahmad
+                            </li>
+                            <li>
+                                Sondus
+                            </li>
+                            <li>
+                                Afnan
+                            </li>
+                            <li>
+                                Ahlam
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -199,61 +172,23 @@ include('navbar.html');
         <!-- Middle Column -->
         <div class="w3-col m7">
 
-            <form name="postForm" action="database/addpost.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+            <form name="postForm" action="database/addpost.php" method="post" accept-charset="utf-8">
                 <div class="w3-row-padding">
                     <div class="w3-col m12">
                         <div class="w3-card w3-round w3-white">
                             <div class="w3-container w3-padding">
-                                <h6 class="w3-opacity" style="text-align: left">Share posts on the social media
-                                    network</h6>
-                                <textarea contenteditable="true" rows="5" class="form-control w3-border w3-padding"
-                                          id="post_txt" name="post_txt" style="width: 100%;text-align: left"
-                                          data-placeholder="Your Status ..."> </textarea>
+                                <h6 class="w3-opacity" style="text-align: left" >Share posts on the social media network</h6>
+                                <textarea contenteditable="true" rows="5" class="form-control w3-border w3-padding" id="post_txt" name="post_txt" style="width: 100%;text-align: left" data-placeholder="Your Status ..."> </textarea>
                                 <div class="row col-sm-4">
-                                    <label for="sel1">Attach file or image:</label>
-                                    <input type="file" class="form-control text-right" id="fileToUpload" name="fileToUpload">
-
-
-
-                                    <label for="sel1">Group</label>
-                                    <select class="form-control" id="group" name="group">
-                                        <option value="0">not limited</option>
-                                        <?php
-
-                                        $mygroup = getMyGroups();
-                                        for($i=0;$i<count($mygroup);$i++){
-                                            echo '<option value="'. $mygroup[$i]['id'] .'">'. $mygroup[$i]['name'] .'</option>';
-                                        }
-
-
-                                        ?>
-                                    </select>
-
-                                    <br/>
-
-                                    <label for="sel1">Post privacy:</label>
-                                    <select class="form-control" id="post_privacy" name="post_privacy">
-                                        <option value="public">public</option>
-                                        <option value="Private">Private</option>
-
-                                    </select>
-
                                     <label for="sel1">Post Type:</label>
                                     <select class="form-control" id="post_type" name="post_type">
-                                        <option value="General">General</option>
+                                        <option value="News">News</option>
                                         <option value="Questions">Questions</option>
-                                        <?php
-
-                                        if($_SESSION['user_type']=="teacher") {
-                                            echo '<option value="News">News</option>';
-                                            echo '<option value="Volunteer">Volunteer</option>';
-                                            echo '<option value="Activity">Activity</option>';
-                                            echo ' <option value="Event">Event</option>';
-                                            echo ' <option value="Material">Material</option>';
-                                            echo ' <option value="Training">Training</option>';
-                                            echo '<option value="Announcement">Announcement</option>';
-                                        }
-                                        ?>
+                                        <option value="Volunteer">Volunteer</option>
+                                        <option value="Activity">Activity</option>
+                                        <option value="Event">Event</option>
+                                        <option value="Training">Training</option>
+                                        <option value="Announcement">Announcement</option>
                                     </select>
                                 </div>
                                 <br/>
@@ -269,16 +204,8 @@ include('navbar.html');
                                     }
                                     ?>
                                 </p>
-
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <button type="submit" id="btn" class="w3-button w3-theme pull-right" style="margin-top: 10px;"><i
-                                            class="fa fa-pencil"></i>
+                                <button type="submit" id="btn" class="w3-button w3-theme" style="margin-top: 10px;"><i
+                                        class="fa fa-pencil"></i>
                                      Post
                                 </button>
                             </div>
@@ -287,14 +214,15 @@ include('navbar.html');
                 </div>
             </form>
 
-<!--
+
+
             <div class="w3-row-padding" style="margin: 5px;">
                 <div class="w3-col m12">
                     <div class="w3-card w3-round w3-white">
                         <div class="w3-container w3-padding">
                             <label class="pull-left" style="font-size: 18px; margin: 3px;"> Public Post</label>
                             <label class="switch pull-left">
-                                <input type="checkbox" checked name="privacy" id="privacy" value="public">
+                                <input type="checkbox" checked>
                                 <span class="slider round" style="min-width: 60px;"></span>
                             </label>
 
@@ -302,8 +230,6 @@ include('navbar.html');
                     </div>
                 </div>
             </div>
-
-            -->
             <!-- Modal -->
             <div id="myModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
@@ -330,12 +256,13 @@ include('navbar.html');
                 </div>
             </div>
 
-<div id="top-post">
+
             <?php
+            $post = getposts();
             foreach ($post as $item) {
-                if ($item["type"] != "Announcement") {
+                if($item["type"] != "Announcement"){
                     echo '
-             <div class="w3-container w3-card w3-white w3-round w3-margin post" data-post="' . $item["post_id"] . '"><br>
+             <div class="w3-container w3-card w3-white w3-round w3-margin" data-post="' . $item["post_id"] . '"><br>
                 <img src="' . $item["img"] . '" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
                 <span class="w3-right w3-opacity">' . $item["created_at"] . '</span>
                 <h4>' . $item["name"] . '</h4><br>
@@ -345,14 +272,6 @@ include('navbar.html');
                 
             
             ';
-                    if($item["filepath"] != "-" && $item["filepath"] != "img/"){
-                        if(strpos($item["filepath"] , 'jpg') || strpos($item["filepath"] , 'png') || strpos($item["filepath"] , 'jpeg')){
-                            echo '<img src='. $item["filepath"] .'  style="width: 300px;height: 300px;"/><br/><br/>';
-                        }else{
-                            echo '<a href="'. $item["filepath"] .'" >'. substr($item["filepath"], 4) .'</a><br/><br/>';
-
-                        }                    }
-
                     echo '<button type="button" class="w3-button w3-theme-d2 w3-margin-bottom msg" data-toggle="modal" data-target="#myModal" data-ownerId="' . $item["user_id"] . '" >  send message <i class="fa fa-envelope"></i></button>';
                     echo '<div class="w3-row-padding">';
                     echo '<div class="w3-col m10 pull-right" style="padding-left: 43px;padding-bottom: 18px;">';
@@ -366,17 +285,17 @@ include('navbar.html');
                     echo '<button style="margin-top: 7px;" type="button" class="w3-button w3-theme-d2 w3-margin-bottom comment" >  comment <i class="fa fa-comment"></i></button>';
                     echo '</div>';
                     echo '</div>';
-                    $comment = getComments();
+                    $comment = getComments ();
                     foreach ($comment as $item2) {
-                        if ($item2["post_id"] == $item["post_id"]) {
+                        if($item2["post_id"] == $item["post_id"]){
                             echo '<div class="col-sm-12 cmnt" >';
                             echo '<div class="panel panel-default">';
                             echo '<div class="panel-heading text-right" style="height: 41px;">';
                             //echo '<span class="glyphicon glyphicon-remove delete-comment pull-left" data-id="'. $item2['comment_id'] .'">&nbsp;</span>';
                             //echo '<span class="glyphicon glyphicon-edit edit-comment pull-left" data-id="'. $item2['comment_id'] .'" data-content="'. $item2['txt'] .'"> &nbsp;</span>';
-                            echo '<span class="text-muted pull-right">' . $item2['created_at'] . '</span>';
-                            echo '<strong class="text-muted pull-left">' . $item2['name'] . ' </strong>';
-                            echo '<span class="text-muted pull-left"><img  src="' . $item2['img'] . '" width="25" height="25" style="border-radius: 50%;"></span>';
+                            echo '<span class="text-muted pull-right">'. $item2['created_at'] .'</span>';
+                            echo '<strong class="text-muted pull-left">'. $item2['name'] .' </strong>';
+                            echo '<span class="text-muted pull-left"><img  src="'. $item2['img'] .'" width="25" height="25" style="border-radius: 50%;"></span>';
                             echo '</div>';
                             echo '<div class="w3-container w3-padding">';
                             echo $item2['txt'];
@@ -391,8 +310,11 @@ include('navbar.html');
             }
 
 
+
+
             ?>
-</div>
+
+
 
         </div>
 
@@ -400,38 +322,31 @@ include('navbar.html');
         <div class="w3-col m2">
             <div class="w3-card w3-round w3-white w3-center">
                 <div class="w3-container">
-                    <h4 class="w3-center"><?php echo getdata("name") ?></h4>
+                    <h4 class="w3-center">Personal Page</h4>
                     <p class="w3-center"><img src="<?php echo getdata("img") ?>" class="w3-circle"
                                               style="height:106px;width:106px" alt="Avatar"></p>
                     <hr>
                     <div dir="ltr" class="pull-left" style="text-align: left">
-                        <p>
-                            <i class="fa fa-pencil fa-fw w3-margin-left w3-text-theme"></i> <?php echo getdata("major") ?>
-                        </p>
-                        <p>
-                            <i class="fa fa-home fa-fw w3-margin-left w3-text-theme"></i> <?php echo getdata("university") ?>
-                        </p>
-                        <p>
-                            <i class="fa fa-birthday-cake fa-fw w3-margin-left w3-text-theme"></i> <?php echo getdata("age") ?>
-                        </p>
+                        <p><i class="fa fa-pencil fa-fw w3-margin-left w3-text-theme"></i> <?php echo getdata("major") ?></p>
+                        <p><i class="fa fa-home fa-fw w3-margin-left w3-text-theme"></i> <?php echo getdata("university") ?></p>
+                        <p><i class="fa fa-birthday-cake fa-fw w3-margin-left w3-text-theme"></i> <?php echo getdata("age") ?></p>
                     </div>
                 </div>
             </div>
             <br>
 
-            <div class="w3-card w3-round " dir="ltr">
-                <div class="w3-white ">
+            <div class="w3-card w3-round " dir="ltr" >
+                <div class="w3-white " >
                     <button class="w3-button w3-block -l1 w3-left-align" onclick="window.location='groups.php'"><i
                                 class="fa fa-circle-o-notch fa-fw w3-margin-left"></i> Groups
                     </button>
 
-                    <button class="w3-button w3-block -l1 w3-left-align"
-                            onclick="window.location='EventAndActivity.php'"><i
-                                class="fa fa-calendar-check-o fa-fw w3-margin-left"></i>Event and Activity
+                    <button class="w3-button w3-block -l1 w3-left-align"><i
+                            class="fa fa-calendar-check-o fa-fw w3-margin-left"></i>Event and Activity
                     </button>
 
                     <button onclick="myFunction('Demo3')" class="w3-button w3-block -l1 w3-left-align"><i
-                                class="fa fa-users fa-fw w3-margin-left"></i> Photos
+                            class="fa fa-users fa-fw w3-margin-left"></i> Photos
                     </button>
                     <div id="Demo3" class="w3-hide w3-container">
                         <div class="w3-row-padding">
@@ -460,6 +375,7 @@ include('navbar.html');
                 </div>
             </div>
             <br>
+
 
 
             <!-- End left Column -->
@@ -491,7 +407,6 @@ include('navbar.html');
 
 <script>
     var to_msg = "";
-
     // Accordion
     function myFunction(id) {
         var x = document.getElementById(id);
@@ -515,7 +430,7 @@ include('navbar.html');
         }
     }
 
-    $(function () {
+    $(function (){
 
         $('.simple-marquee-container').SimpleMarquee();
 
@@ -530,10 +445,11 @@ include('navbar.html');
             var post_id = ele.getAttribute("data-post");
 
 
-            if (text_content.value == "") {
+
+            if(text_content.value == ""){
                 alert("يجب إدخال نص للتعليق!");
                 return false;
-            } else {
+            }else{
                 console.log(text_content.value)
                 console.log(post_id)
                 $.ajax({
@@ -642,6 +558,7 @@ function getdata($input)
 }
 
 
+
 function getposts()
 {
     $servername = "localhost";
@@ -656,36 +573,20 @@ function getposts()
         die("Connection failed: " . mysqli_connect_error());
     }
     mysqli_set_charset($conn, "utf8");
-
-
-    $queryid = "select * from  `user` where email = '" . $_SESSION['user_email'] . "'";
-    $resultid = $conn->query($queryid);
-    $user_id = "";
-    if ($resultid->num_rows > 0) {
-        $row = $resultid->fetch_assoc();
-        $user_id = $row["id"];
-    }
-
-
-    $query = "SELECT post.id as post_id,post.type as post_type, post.txt,post.created_at,user.id as user_id, user.name,user.img, post.type as type , post.filepath FROM `post`
-  inner join user  ON post.user_id = user.id where user.id in (select friends.user_id2 from friends
-   where friends.status=1)  
-   or  user.id in (select friends.user_id1 from friends where friends.status=1)
-    or user.id = '. $user_id .' ORDER by post.id desc ";
+    $query = "SELECT post.id as post_id,post.type as post_type, post.txt,post.created_at,user.id as user_id, user.name,user.img, post.type as type FROM `post`  inner join user  ON post.user_id = user.id where post.type = 'Event' or post.type = 'Activity' ORDER by post.id desc ";
     $result = $conn->query($query);
 
     if ($result->num_rows > 0) {
         $post = [];
         while ($row = $result->fetch_assoc()) {
-            array_push($post, ["post_id" => $row["post_id"], "txt" => $row["txt"], "created_at" => $row["created_at"], "user_id" => $row["user_id"], "name" => $row["name"], "img" => $row["img"], "type" => $row["type"], "filepath" => $row["filepath"],]);
+            array_push($post, ["post_id" => $row["post_id"], "txt" => $row["txt"], "created_at" => $row["created_at"], "user_id" => $row["user_id"], "name" => $row["name"], "img" => $row["img"], "type" => $row["type"],]);
         }
         return $post;
     }
 }
 
 
-function getComments()
-{
+function getComments (){
     $servername = "localhost";
     $username = "social_media";
     $password = "";
@@ -704,7 +605,7 @@ function getComments()
     if ($result->num_rows > 0) {
         $comment = [];
         while ($row = $result->fetch_assoc()) {
-            array_push($comment, ["comment_id" => $row["comment_id"], "user_id" => $row["user_id"], "created_at" => $row["created_at"], "post_id" => $row["post_id"], "name" => $row["name"], "img" => $row["img"], "txt" => $row["txt"]]);
+            array_push($comment, ["comment_id" => $row["comment_id"], "user_id" => $row["user_id"], "created_at" => $row["created_at"], "post_id" => $row["post_id"], "name" => $row["name"], "img" => $row["img"],"txt" => $row["txt"]]);
         }
         return $comment;
     } else {
@@ -712,7 +613,6 @@ function getComments()
         header('Location: ../sign_in.php');
     }
 }
-
 
 function getPhotos()
 {
@@ -746,87 +646,6 @@ function getPhotos()
             array_push($imgs, ["img" => $row["img_path"]]);
         }
         return $imgs;
-    } else {
-        return [];
-    }
-}
-
-
-function getFriends(){
-    $servername = "localhost";
-    $username = "social_media";
-    $password = "";
-
-// Create connection
-//$conn = mysqli_connect($servername, $username, $password);
-    $conn = mysqli_connect($servername, "root", $password, $username, "3306");
-// Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    mysqli_set_charset($conn, "utf8");
-    $queryid = "select * from  `user` where email = '" . $_SESSION['user_email'] . "'";
-    $resultid = $conn->query($queryid);
-    $user_id = "";
-    if ($resultid->num_rows > 0) {
-        $row = $resultid->fetch_assoc();
-        $user_id = $row["id"];
-    } else {
-        header('Location: ../sign_in.php');
-    }
-
-
-    $query = "SELECT user.*, friends.status FROM `friends` inner join user on friends.user_id1 = user.id or friends.user_id2 = user.id  WHERE `user_id2` =".$user_id." or `user_id1` =".$user_id." and friends.status =1" ;
-
-    $result = $conn->query($query);
-
-    if ($result->num_rows > 0) {
-        $info = [];
-        while ($row = $result->fetch_assoc()) {
-            array_push($info, ["id" => $row["id"], "name" => $row["name"], "status" => $row["status"], "my_user_id" => $user_id]);
-        }
-        return $info;
-    } else {
-        return [];
-    }
-}
-
-
-
-function getMyGroups(){
-    $servername = "localhost";
-    $username = "social_media";
-    $password = "";
-
-// Create connection
-//$conn = mysqli_connect($servername, $username, $password);
-    $conn = mysqli_connect($servername, "root", $password, $username, "3306");
-// Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    mysqli_set_charset($conn, "utf8");
-    $queryid = "select * from  `user` where email = '" . $_SESSION['user_email'] . "'";
-    $resultid = $conn->query($queryid);
-    $user_id = "";
-    if ($resultid->num_rows > 0) {
-        $row = $resultid->fetch_assoc();
-        $user_id = $row["id"];
-    } else {
-        header('Location: ../sign_in.php');
-    }
-
-
-    $query = "SELECT `group`.* FROM `group_user` inner join `group` on group_user.group_id = `group`.id where group_user.user_id =".$user_id ;
-
-    $result = $conn->query($query);
-
-    if ($result->num_rows > 0) {
-        $info = [];
-        while ($row = $result->fetch_assoc()) {
-            array_push($info, ["id" => $row["id"], "name" => $row["name"]]);
-        }
-        return $info;
     } else {
         return [];
     }

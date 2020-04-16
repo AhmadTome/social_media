@@ -126,6 +126,15 @@ session_start();
                     </div>
                 </div>
                 <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <select class="form-control" id="user_type" name="user_type">
+                                        <option value="student">Student</option>
+                                        <option value="teacher">Teacher</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
                     <button type="submit" class="btn btn-block login-btn" style="color: white">SingUp</button>
                 </div>
                  <p class="text-left" style="color: red">
