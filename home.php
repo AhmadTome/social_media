@@ -339,6 +339,7 @@ include('navbar.html');
                     echo '
              <div class="w3-container w3-card w3-white w3-round w3-margin post" data-post="' . $item["post_id"] . '"><br>
                 <img src="' . $item["img"] . '" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                <span style="margin-left:35px;" class="glyphicon glyphicon-remove delete-post pull-right" data-id="'. $item['post_id'] .'">&nbsp;</span>
                 <span class="w3-right w3-opacity">' . $item["created_at"] . '</span>
                 <h4>' . $item["name"] . '</h4><br>
                 <span style="margin-right: 15px;color: #6FAFB9;font-weight: bold;" class="w3-right w3-opacity">' . $item["type"] . '*</span>
@@ -560,6 +561,28 @@ include('navbar.html');
             }
 
         });
+
+        $('.delete-post').on("click",function (event) {
+            var ele = event.target;
+            var id = $(this).attr('data-id');
+
+            $.ajax({
+                url: "database/deletepost.php",
+                type: "get",
+                data: {"id": id},
+                success: function (data) {
+                    alert(data)
+                    ele.closest('.w3-container.w3-card.w3-white.w3-round.w3-margin').remove()
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+
+
+            });
+        })
+
+
 
         $('.msg').on("click", function () {
             to_msg = $(this).attr('data-ownerId');
