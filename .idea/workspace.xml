@@ -4,28 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/home.php" line="332" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebfa4dd6-7d3a-4ece-a7e6-9a54019eb877" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/EventAndActivity.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/FriendAcceptRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/FriendSendRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/addComment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/addPhoto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/addgroup.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/joinGroup.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/result.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendList.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groups.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/default.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/stylesheets/messages.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/stylesheets/messages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/addpost.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/addpost.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalinfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/personalinfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sign_up.php" beforeDir="false" afterPath="$PROJECT_DIR$/sign_up.php" afterDir="false" />
-    </list>
+    <list default="true" id="ebfa4dd6-7d3a-4ece-a7e6-9a54019eb877" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+            <state relative-caret-position="646">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -87,6 +66,7 @@
       <find>getFriends</find>
       <find>\n</find>
       <find>post</find>
+      <find>category</find>
     </findStrings>
     <replaceStrings>
       <replace>left</replace>
@@ -126,7 +106,7 @@
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1932" />
     <option name="y" value="-154" />
     <option name="width" value="1936" />
@@ -219,12 +199,12 @@
       <workItem from="1586697913790" duration="475000" />
       <workItem from="1586698397826" duration="14780000" />
       <workItem from="1586985831636" duration="743000" />
-      <workItem from="1587037643233" duration="16696000" />
+      <workItem from="1587037643233" duration="17338000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75388000" />
+    <option name="totallyTimeSpent" value="76030000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-225" width="1936" height="1056" extended-state="6" />
@@ -462,10 +442,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/vendor/jquery-ui/development-bundle/docs/droppable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+        <state relative-caret-position="646">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
