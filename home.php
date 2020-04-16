@@ -142,6 +142,7 @@ include('navbar.html');
             <ul class="marquee-content-items">
                 <?php
                 $post = getposts();
+
                 foreach ($post as $item) {
                     if ($item["type"] == "Announcement")
                         echo '<li>' . $item["txt"] . '</li>';
@@ -332,7 +333,8 @@ include('navbar.html');
 
 <div id="top-post">
             <?php
-            foreach ($post as $item) {
+            if(count($post)>0)
+                foreach ($post as $item) {
                 if ($item["type"] != "Announcement") {
                     echo '
              <div class="w3-container w3-card w3-white w3-round w3-margin post" data-post="' . $item["post_id"] . '"><br>
@@ -667,11 +669,13 @@ function getposts()
     }
 
 
-    $query = "SELECT post.id as post_id,post.type as post_type, post.txt,post.created_at,user.id as user_id, user.name,user.img, post.type as type , post.filepath FROM `post`
-  inner join user  ON post.user_id = user.id where user.id in (select friends.user_id2 from friends
+    $query = 'SELECT post.id as post_id,post.type as post_type, post.txt,post.created_at,user.id as user_id, user.name,user.img, post.type as type , post.filepath FROM `post`
+  inner join user ON post.user_id = user.id where user.id = '. $user_id .' or user.id in (select friends.user_id2 from friends
    where friends.status=1)  
    or  user.id in (select friends.user_id1 from friends where friends.status=1)
-    or user.id = '. $user_id .' ORDER by post.id desc ";
+     ORDER by post.id desc ';
+
+
     $result = $conn->query($query);
 
     if ($result->num_rows > 0) {

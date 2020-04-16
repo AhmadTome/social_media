@@ -91,8 +91,8 @@ session_start();
 </head>
 <body>
 <div class="login-form" style="margin-top: 110px;">
-    <form action="database/register.php" method="post" style="border-radius: 21%;height: 415px;">
-        <div class="parent_class" style="width: 100%; height: 320px;">
+    <form action="database/register.php" method="post" style="border-radius: 21%;height: 460px;">
+        <div class="parent_class" style="width: 100%;;">
             <span style="display: inline-block; width: 45%; background-color: grey">
             <div style="margin-top: -154px;margin-left: 91px;">
                 <img src="assets/images/logo.jfif" style="border-radius: 50%; width: 150px;height: 150px; position: absolute; margin-top: -99px; margin-left: -70px;" >
